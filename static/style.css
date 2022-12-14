@@ -1,0 +1,120 @@
+h1
+{
+    font-size: 30px;
+}
+label
+{
+    font-size: 25px ;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+input[type=submit]:hover 
+{
+    background-color: #1E90FF;
+    animation: mymove 5s infinite;
+}
+
+input[type=text],select 
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+.FirstDiv
+{
+    height: 500 px;
+    width: 500px;
+    margin-top: 30px;
+}
+.radio
+{
+    
+    font-size: 10px;
+    background-color: #1E90FF;
+}
+
+
+.input-radio
+{
+    cursor: pointer;
+}
+
+
+
+
+
+.container-animacion-1 {
+    position: fixed;
+    width: 150px;
+    top: 0;
+    right: -160px;
+    bottom: 0;
+    /* background: orange; */
+    transition: 0.2s ease;
+}
+
+
+.container-animacion-2 {
+    position: fixed;
+    width: 150px;
+    top: 0;
+    right: -160px;
+    bottom: 0;
+    background: blue;
+    transition: 0.2s ease;
+}
+
+.container-animacion-3 {
+    position: fixed;
+    width: 150px;
+    top: 0;
+    right: -160px;
+    bottom: 0;
+    background: green;
+    transition: 0.2s ease;
+}
+
+#control-div-1:checked~.container-animacion-1 
+{
+    position: absolute;
+    top: 460px;
+    left: 60%;
+    width: 500px;
+    transform: translate(-50%, -70%);
+    
+}
+
+#control-div-2:checked~.container-animacion-2 {
+    right: 0
+}
+
+#control-div-3:checked~.container-animacion-3 {
+    right: 0
+}
+
+body
+{
+    background-image: url("./wallpaper.jpg");
+    background-size: cover;
+    color: white; 
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+h1.Title:before
+{
+    content: url(Logo_ISFT_151.png)
+}

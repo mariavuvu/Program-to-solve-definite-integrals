@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="./favicon.jpg"> -->
+    <link rel="shortcut icon" href={{ url_for('static',filename = 'favicon.ico')}}>
+    <link rel="stylesheet" href={{ url_for('static',filename = 'style.css')}}>
+    
+    <title>Integrales definidas examen final</title>
+</head>
+<body>
+
+    <h1 class="Title"> Instituto Superior de Formación Técnica Nº151</h1>
+    <hr />
+    <h3>Software educacional para la materia "Análisis matemático 2"</h3>
+    <hr />
+
+    <div class="FirstDiv">
+        <form action="/form-example" method="POST">
+            <label>Seleccione su función: </label><br><br>
+            <div class="input-radio" ><input type='radio' id="control-div-1" class="radio" style = "height: 18px; width: 18px;" name='function' value='exponencial'> <label>exponencial</label>
+                <div class="container-animacion-1">
+                    <hr>
+                    <div><label>Ingrese el valor de a = <input type="text" name="aExponencial" placeholder="a..."></label></div>
+                    <div><label>Ingrese el valor de n = <input type="text" name="n" placeholder="n..."></label></div>
+                </div>
+            </div>
+            <br>
+            <div class="input-radio"><input type='radio' id="control-div-1" class="radio" style = "height: 18px; width: 18px;" name='function' value='cuadrática' checked> <label>cuadrática</label>
+            
+                <div class="container-animacion-1">
+                   <hr>
+                    <div><label>Ingrese el valor de a = <input type="text" name="a" placeholder="a..."></label></div>
+                    <div><label>Ingrese el valor de b = <input type="text" name="b" placeholder="b..."></label></div>
+                    <div><label>Ingrese el valor de c = <input type="text" name="c" placeholder="c..."></label></div>
+                </div>
+            
+            </div>            
+            <br>
+            <div class="input-radio"><input type='radio' id="control-div-1"  class="radio" style = "height: 18px; width: 18px;" name='function' value='trigonométrica'> <label>trigonométrica</label>
+            
+                <div class="container-animacion-1">
+                    <hr>
+                    <div><label>Ingrese el valor de a = <input type="text" name="aSeno" placeholder="a..."></label></div>
+                    <div><label>Ingrese el valor de k = <input type="text" name="k" placeholder="k..."></label></div>
+                </div>
+            
+            </div>
+            <hr />
+            <!-- <div class="input-radio" ><input type="radio" id="control-div-1" name="controlar-divs"><label for="control-div-1">Controlar div 1</label>
+                <div class="container-animacion-1">
+                    <p>div a controlar</p>
+                </div>
+            </div> -->
+
+            <!-- <div><label>Ingrese la funcion f(x) =  <input type="text" name="f" placeholder="&int;Función..."></label></div> -->
+            <div><label>Ingrese el limite inferior x0 = <input type="text" name="x0" placeholder="Limite inferior..."></label></div>
+            <div><label>Ingrese el limite superior x1 = <input type="text" name="x1" placeholder="Limite superior..."></label></div>
+            <div><label>Ingrese la cantidad de intervalos = <input type="text" name="intervalos" placeholder="intervalos..."></label></div>
+            <input type="submit" value="Submit" class="Button">
+
+        </form>
+    </div>
+</body>
+</html>
