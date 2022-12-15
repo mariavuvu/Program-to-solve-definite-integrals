@@ -295,7 +295,7 @@ def form_example():
                 </ul>
                 <h1>Solución:</h1>
                 <ul>
-                    <li><h1>Area bajo la funcion: {}</h1></li>
+                    <li><h1>Área bajo la función: {}</h1></li>
                     <li><h1>Aproximación: {}</h1></li>
                     <li><h1>Error cometido: {}</h1></li>
                     </ul>
