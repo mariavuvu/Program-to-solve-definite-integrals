@@ -33,6 +33,8 @@ def quadraticArea(aq, bq, c, a, b, intervalo):
     f0 = aquadratic*x**2 + bquadratic*x + cquadratic
     f = str(f0)
     raiz1, raiz2 = solve(f)
+    raiz1cast = round(raiz1,13) 
+    raiz2cast = round(raiz2,13) 
     area = []
     def f2(x): return eval(f)
     if (a < raiz1 and b <= raiz1):
@@ -41,22 +43,22 @@ def quadraticArea(aq, bq, c, a, b, intervalo):
         aproximacion = midpoint(f2, a, b, intervalo)
         area.append(abs(aproximacion))
     if (a < raiz1 and b > raiz1 and b <= raiz2):
-        r1Integral = integrate(f, (x, a, raiz1))
-        r2Integral = integrate(f, (x, raiz1, b))
-        valueOne = midpoint(f2, a, raiz1, intervalo)
-        valueTwo = midpoint(f2, raiz1, b, intervalo)
+        r1Integral = abs(integrate(f, (x, a, raiz1cast)))
+        r2Integral = abs(integrate(f, (x, raiz1cast, b)))
+        valueOne = midpoint(f2, a, raiz1cast, intervalo)
+        valueTwo = midpoint(f2, raiz1cast, b, intervalo)
         aproximacion = abs(valueOne - valueTwo)
-        area.append(abs(r1Integral - r2Integral))
+        area.append(abs(r1Integral + r2Integral))
         area.append(aproximacion)
     if (a < raiz1 and b > raiz2):
-        r1Integral = integrate(f, (x, a, raiz1))
-        r2Integral = integrate(f, (x, raiz1, raiz2))
-        r3Integral = integrate(f, (x, raiz2, b))
-        valueOne = midpoint(f2, a, raiz1, intervalo)
-        valueTwo = midpoint(f2, raiz1, raiz2, intervalo)
-        valueThree = midpoint(f2, raiz2, b, intervalo)
+        r1Integral = abs(integrate(f, (x, a, raiz1cast)))
+        r2Integral = abs(integrate(f, (x, raiz1cast, raiz2cast)))
+        r3Integral = abs(integrate(f, (x, raiz2cast, b)))
+        valueOne = midpoint(f2, a, raiz1cast, intervalo)
+        valueTwo = midpoint(f2, raiz1cast, raiz2cast, intervalo)
+        valueThree = midpoint(f2, raiz2cast, b, intervalo)
         aproximacion = abs(valueOne - valueTwo+valueThree)
-        area.append(r1Integral - r2Integral + r3Integral)
+        area.append(r1Integral + r2Integral + r3Integral)
         area.append(aproximacion)
 
     if (a >= raiz1 and a < raiz2 and b > raiz1 and b <= raiz2):
@@ -65,11 +67,11 @@ def quadraticArea(aq, bq, c, a, b, intervalo):
         aproximacion = midpoint(f2, a, b, intervalo)
         area.append(abs(aproximacion))
     if (a >= raiz1 and a < raiz2 and b > raiz2):
-        r1Integral = integrate(f, (x, a, raiz2))
-        r2Integral = integrate(f, (x, raiz2, b))
-        area.append(abs(r1Integral - r2Integral))
-        valueOne = midpoint(f2, a, raiz2, intervalo)
-        valueTwo = midpoint(f2, raiz2, b, intervalo)
+        r1Integral = abs(integrate(f, (x, a, raiz2cast)))
+        r2Integral = abs(integrate(f, (x, raiz2cast, b)))
+        area.append(abs(r1Integral + r2Integral))
+        valueOne = midpoint(f2, a, raiz2cast, intervalo)
+        valueTwo = midpoint(f2, raiz2cast, b, intervalo)
         aproximacion = abs(valueOne - valueTwo)
         area.append(aproximacion)
     if (raiz1 == raiz2):
