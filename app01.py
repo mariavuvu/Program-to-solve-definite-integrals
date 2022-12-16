@@ -289,7 +289,8 @@ def form_example():
             notationScientific = ListIntegralAproximation[2]
 
         return '''
-                <h1>La integral definida de la función elegida (reescrita/simplificada) es: &int;{}</h1>
+                <h1>La integral definida de la función elegida (reescrita/simplificada) 
+                es: &int;{}</h1>
                 <h1>Con sus límites:</h1>
                 <ul>
                     <li><h1>Inferior: x<sub>0</sub> = {}</h1></li>
